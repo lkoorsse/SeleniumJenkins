@@ -1,19 +1,14 @@
-﻿using NUnit.Framework;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SeleniumJenkins;
 using SeleniumJenkins.PageObjects;
-
-
 
 namespace SeleniumJenkins
 {
-    public class TestClass
+   // [TestClass]
+    public class TestAcademyBasicUnit
     {
         private IWebDriver driver;
 
@@ -24,14 +19,17 @@ namespace SeleniumJenkins
             //   driver.Manage().Window.Maximize();
         }
 
+
         [Test]
-        public void J_SearchTextFromAboutPage()
+        public void TestAcademyBasic()
         {
+
             HomePage home = new HomePage(driver);
             home.goToPage();
             AboutPage about = home.goToAboutPage();
-            ResultPage result = about.search("selenium c#");
+          //  ResultPage result = about.search("selenium c#");
             //  result.clickOnFirstArticle();
+
         }
 
         [TearDown]

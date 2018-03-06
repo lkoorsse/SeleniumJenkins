@@ -15,28 +15,28 @@ namespace SeleniumJenkins.PageObjects
         public AboutPage(IWebDriver driver)
         {
             this.driver = driver;
-            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             PageFactory.InitElements(driver, this);
         }
 
-        [FindsBy(How = How.CssSelector, Using = ".fusion-custom-menu-item")]
-        private IWebElement searchIcon;
+        //[FindsBy(How = How.CssSelector, Using = ".fusion-custom-menu-item")]
+        //private IWebElement searchIcon;
 
-        [FindsBy(How = How.CssSelector, Using = ".s")]
-        private IWebElement searchText;
+        //[FindsBy(How = How.CssSelector, Using = ".s")]
+        //private IWebElement searchText;
 
-        [FindsBy(How = How.CssSelector, Using = ".searchsubmit")]
-        private IWebElement searchSelect;
+        //[FindsBy(How = How.CssSelector, Using = ".searchsubmit")]
+        //private IWebElement searchSelect;
 
 
 
         public ResultPage search(string text)
         {
 
-            searchIcon.Click();
+          //  searchIcon.Click();
             //   wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".fusion-custom-menu-item")))searchIcon.Click();
 
-            searchText.SendKeys(text);
+           // searchText.SendKeys(text);
             wait.Until(ExpectedConditions.ElementToBeClickable(By.CssSelector(".searchsubmit"))).Click();
             return new ResultPage(driver);
         }

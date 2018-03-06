@@ -8,11 +8,11 @@ namespace SeleniumJenkins.PageObjects
 {
     public class ResultPage
     {
-        private IWebDriver driver;
+       // private IWebDriver driver;
 
         public ResultPage(IWebDriver driver)
         {
-            this.driver = driver;
+           // this.driver = driver;
             PageFactory.InitElements(driver, this);
 
         }
